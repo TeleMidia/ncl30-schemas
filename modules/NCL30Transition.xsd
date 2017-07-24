@@ -1,0 +1,228 @@
+<!--
+XML Schema for the NCL modules
+
+This is NCL
+Copyright: 2000-2006 PUC-RIO/LABORATORIO TELEMIDIA, All Rights Reserved.
+See http://www.telemidia.puc-rio.br
+
+Public URI: http://www.ncl.org.br/NCL3.0/modules/NCL30Transition.xsd
+Author: TeleMidia Laboratory
+Revision: 19/09/2006
+
+Schema for the NCL Transition module namespace.
+-->
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+  xmlns:transition="http://www.ncl.org.br/NCL3.0/Transition"
+  targetNamespace="http://www.ncl.org.br/NCL3.0/Transition"
+  elementFormDefault="qualified" attributeFormDefault="unqualified" >
+
+
+  <!-- declare global attributes in this module -->
+
+  <!-- define the type attribute prototype -->
+  <simpleType name="typePrototype">
+     <restriction base="string">
+        <enumeration value="in"/>
+        <enumeration value="barWipe"/>
+        <enumeration value="boxWipe"/>
+        <enumeration value="fourBoxWipe"/>
+        <enumeration value="barnDoorWipe"/>
+        <enumeration value="diagonalWipe"/>
+        <enumeration value="bowTieWipe"/>
+        <enumeration value="miscDiagonalWipe"/>
+        <enumeration value="veeWipe"/>
+        <enumeration value="barnVeeWipe"/>
+        <enumeration value="zigZagWipe"/>
+        <enumeration value="barnZigZagWipe"/>
+        <enumeration value="irisWipe"/>
+        <enumeration value="triangleWipe"/>
+        <enumeration value="arrowHeadWipe"/>
+        <enumeration value="pentagonWipe"/>
+        <enumeration value="hexagonWipe"/>
+        <enumeration value="ellipseWipe"/>
+        <enumeration value="eyeWipe"/>
+        <enumeration value="roundRectWipe"/>
+        <enumeration value="starWipe"/>
+        <enumeration value="miscShapeWipe"/>
+        <enumeration value="clockWipe"/>
+        <enumeration value="pinWheelWipe"/>
+        <enumeration value="singleSweepWipe"/>
+        <enumeration value="fanWipe"/>
+        <enumeration value="doubleFanWipe"/>
+        <enumeration value="doubleSweepWipe"/>
+        <enumeration value="saloonDoorWipe"/>
+        <enumeration value="windshieldWipe"/>
+        <enumeration value="snakeWipe"/>
+        <enumeration value="spiralWipe"/>
+        <enumeration value="parallelSnakesWipe"/>
+        <enumeration value="boxSnakesWipe"/>
+        <enumeration value="waterfallWipe"/>
+        <enumeration value="pushWipe"/>
+        <enumeration value="slideWipe"/>
+        <enumeration value="fade"/>
+        <enumeration value="audioFade"/>
+        <enumeration value="audioVisualFade"/>
+     </restriction>
+  </simpleType>
+
+  <!-- define subType attribute prototype-->
+  <simpleType name="subTypePrototype">
+     <restriction base="string">
+        <enumeration value="bottom"/>
+        <enumeration value="bottomCenter"/>
+        <enumeration value="bottomLeft"/>
+        <enumeration value="bottomLeftClockwise"/>
+        <enumeration value="bottomLeftCounterClockwise"/>
+        <enumeration value="bottomLeftDiagonal"/>
+        <enumeration value="bottomRight"/>
+        <enumeration value="bottomRightClockwise"/>
+        <enumeration value="bottomRightCounterClockwise"/>
+        <enumeration value="bottomRightDiagonal"/>
+        <enumeration value="centerRight"/>
+        <enumeration value="centerTop"/>
+        <enumeration value="circle"/>
+        <enumeration value="clockwiseBottom"/>
+        <enumeration value="clockwiseBottomRight"/>
+        <enumeration value="clockwiseLeft"/>
+        <enumeration value="clockwiseNine"/>
+        <enumeration value="clockwiseRight"/>
+        <enumeration value="clockwiseSix"/>
+        <enumeration value="clockwiseThree"/>
+        <enumeration value="clockwiseTop"/>
+        <enumeration value="clockwiseTopLeft"/>
+        <enumeration value="clockwiseTwelve"/>
+        <enumeration value="cornersIn"/>
+        <enumeration value="cornersOut"/>
+        <enumeration value="counterClockwiseBottomLeft"/>
+        <enumeration value="counterClockwiseTopRight"/>
+        <enumeration value="crossfade"/>
+        <enumeration value="diagonalBottomLeft"/>
+        <enumeration value="diagonalBottomLeftOpposite"/>
+        <enumeration value="diagonalTopLeft"/>
+        <enumeration value="diagonalTopLeftOpposite"/>
+        <enumeration value="diamond"/>
+        <enumeration value="doubleBarnDoor"/>
+        <enumeration value="doubleDiamond"/>
+        <enumeration value="down"/>
+        <enumeration value="fadeFromColor"/>
+        <enumeration value="fadeToColor"/>
+        <enumeration value="fanInHorizontal"/>
+        <enumeration value="fanInVertical"/>
+        <enumeration value="fanOutHorizontal"/>
+        <enumeration value="fanOutVertical"/>
+        <enumeration value="fivePoint"/>
+        <enumeration value="fourBlade"/>
+        <enumeration value="fourBoxHorizontal"/>
+        <enumeration value="fourBoxVertical"/>
+        <enumeration value="fourPoint"/>
+        <enumeration value="fromBottom"/>
+        <enumeration value="fromLeft"/>
+        <enumeration value="fromRight"/>
+        <enumeration value="fromTop"/>
+        <enumeration value="heart"/>
+        <enumeration value="horizontal"/>
+        <enumeration value="horizontalLeft"/>
+        <enumeration value="horizontalLeftSame"/>
+        <enumeration value="horizontalRight"/>
+        <enumeration value="horizontalRightSame"/>
+        <enumeration value="horizontalTopLeftOpposite"/>
+        <enumeration value="horizontalTopRightOpposite"/>
+        <enumeration value="keyhole"/>
+        <enumeration value="left"/>
+        <enumeration value="leftCenter"/>
+        <enumeration value="leftToRight"/>
+        <enumeration value="oppositeHorizontal"/>
+        <enumeration value="oppositeVertical"/>
+        <enumeration value="parallelDiagonal"/>
+        <enumeration value="parallelDiagonalBottomLeft"/>
+        <enumeration value="parallelDiagonalTopLeft"/>
+        <enumeration value="parallelVertical"/>
+        <enumeration value="rectangle"/>
+        <enumeration value="right"/>
+        <enumeration value="rightCenter"/>
+        <enumeration value="sixPoint"/>
+        <enumeration value="top"/>
+        <enumeration value="topCenter"/>
+        <enumeration value="topLeft"/>
+        <enumeration value="topLeftClockwise"/>
+        <enumeration value="topLeftCounterClockwise"/>
+        <enumeration value="topLeftDiagonal"/>
+        <enumeration value="topLeftHorizontal"/>
+        <enumeration value="topLeftVertical"/>
+        <enumeration value="topRight"/>
+        <enumeration value="topRightClockwise"/>
+        <enumeration value="topRightCounterClockwise"/>
+        <enumeration value="topRightDiagonal"/>
+        <enumeration value="topToBottom"/>
+        <enumeration value="twoBladeHorizontal"/>
+        <enumeration value="twoBladeVertical"/>
+        <enumeration value="twoBoxBottom"/>
+        <enumeration value="twoBoxLeft"/>
+        <enumeration value="twoBoxRight"/>
+        <enumeration value="twoBoxTop"/>
+        <enumeration value="up"/>
+        <enumeration value="vertical"/>
+        <enumeration value="verticalBottomLeftOpposite"/>
+        <enumeration value="verticalBottomSame"/>
+        <enumeration value="verticalLeft"/>
+        <enumeration value="verticalRight"/>
+        <enumeration value="verticalTopLeftOpposite"/>
+        <enumeration value="verticalTopSame"/>
+     </restriction>  
+  </simpleType>
+
+  <attributeGroup name="transAttrs">
+    <attribute name="transIn" type="string" use="optional"/>
+    <attribute name="transOut" type="string" use="optional"/>
+  </attributeGroup>
+  
+  <!-- define the transition attribute group -->
+  <attributeGroup name="transitionAttrs">
+    <attribute name="type" type="transition:typePrototype" use="required"/>
+    <attribute name="subtype" type="transition:subTypePrototype" use="optional"/>
+    <attribute name="fadeColor" type="string" use="optional" default="black"/>
+    <attribute name="dur" type="string" use="optional"/>
+    <attribute name="startProgress" use="optional" default="0.0">
+       <simpleType>
+         <restriction base="decimal">
+             <minInclusive value="0.0"/>
+             <maxInclusive value="1.0"/>
+         </restriction>
+       </simpleType> 
+    </attribute>
+    <attribute name="endProgress" use="optional" default="1.0">
+       <simpleType>
+          <restriction base="decimal">
+             <minInclusive value="0.0"/>
+             <maxInclusive value="1.0"/>
+          </restriction>
+       </simpleType>
+    </attribute>
+    <attribute name="direction" use="optional" default="forward">
+       <simpleType>
+          <restriction base="string">
+            <enumeration value="forward"/>
+            <enumeration value="reverse"/>
+         </restriction>
+       </simpleType>	 
+    </attribute>
+  </attributeGroup>
+
+  <!-- define the transition-modifier attribute group -->
+  <attributeGroup name="transitionModifierAttrs">
+    <attribute name="horzRepeat" type="decimal" use="optional"  default="1.0"/>
+    <attribute name="vertRepeat" type="decimal" use="optional"  default="1.0"/>
+    <attribute name="borderWidth" type="nonNegativeInteger" use="optional"  default="0"/>
+    <attribute name="borderColor" type="string" use="optional"  default="black"/>
+  </attributeGroup>
+
+  <complexType name="transitionPrototype">
+     <attribute name="id" type="ID" use="required"/>
+     <attributeGroup ref="transition:transitionAttrs"/>
+     <attributeGroup ref="transition:transitionModifierAttrs"/>
+  </complexType>
+
+  <!-- declare global element in this module -->
+  <element name="transition" type="transition:transitionPrototype"/>
+
+</schema>

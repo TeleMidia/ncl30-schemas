@@ -1,0 +1,56 @@
+<!--
+XML Schema for the NCL modules
+
+This is NCL
+Copyright: 2000-2005 PUC-RIO/LABORATORIO TELEMIDIA, All Rights Reserved.
+See http://www.telemidia.puc-rio.br
+
+Public URI: http://www.ncl.org.br/NCL3.0/modules/NCL30PropertyAnchor.xsd
+Author: TeleMidia Laboratory
+Revision: 19/09/2006
+
+Schema for the NCL Property Anchor module namespace.
+-->
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+  xmlns:propertyAnchor="http://www.ncl.org.br/NCL3.0/PropertyAnchor"
+  targetNamespace="http://www.ncl.org.br/NCL3.0/PropertyAnchor"
+  elementFormDefault="qualified" attributeFormDefault="unqualified" >
+
+
+  <complexType name="propertyAnchorPrototype">
+    <attribute name="name" type="string" use="required" />
+    <attribute name="value" type="string" use="optional" />
+    <attribute name="externable" type="boolean" use="optional" />
+  </complexType>
+
+<!--
+The following reserved words are used for properties' names. 
+* For audio media-obejcts: soundLevel; balanceLevel; trebleLevel; bassLevel.
+* For text media-objects: style, which refers to a style sheet with information for text 
+presentation; textAlign; fontColor; fontFamily; fontStyle; fontSize; fontVariant; 
+fontWeight.
+* For visual media-objects (any NCL media object, represented by a <media> element, 
+whose content produces a visual presentation when the object is started): background, 
+specifying the background color used to fill the area of a region displaying media; 
+scroll, which allows the specification of how an author would like to configure the 
+scroll in a region; fit, indicating how an object will be presented (hidden, fill, meet, 
+meetBest, slice); transparency, indicating the degree of transparency of an object 
+presentation (the value shall be between 0 and 1, or a real value in the range [0,100] 
+ending with the character "%" (e.g. 30%)); visible, indicating if the presentation is to 
+be seen or hidden; rgbChromakey; the object positioning parameters: top, left, bottom, 
+right, width, height, zIndex, plan, location, size and bounds; the focus movement 
+parameters: moveLeft, moveRight, moveUp, moveDown, focusIndex; the other related focus 
+parameters: focusBorderColor, selBorderColor, focusBorderWidth, focusBorderTransparency, 
+focusSrc, and focusSelSrc; the transition parameters: transIn and transOut; the timing 
+parameters: explicitDur and freeze; and the multiple device parameters: baseDeviceRegion 
+and deviceClass.
+* For media-objects in general: player; reusePlayer, which determines if a new player 
+shall be instantiated or if a player already instantiated shall be used; and playerLife, 
+which specifies what will happen to the player instance at the end of the presentation.
+-->
+
+
+  <!-- declare global elements in this module -->
+  <element name="property" type="propertyAnchor:propertyAnchorPrototype"/>
+
+</schema>
